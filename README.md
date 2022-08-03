@@ -30,6 +30,7 @@ Principais variáveis disponíveis para o objeto:
 Classe responsável por todos os cálculos de precificação e riscos de Bonds de forma generalizada
 
 **kwargs disponíveis:
+
   - annual_coupon, float, default = 0:
   
       Cupom anual de juros
@@ -73,10 +74,13 @@ Classe responsável por todos os cálculos de precificação e riscos de Bonds d
       
 
 Principais variáveis disponíveis para o objeto:
+
 ---- Variáveis relativas ao Pricing
+
 - obj.price retorna o preço calculado para o ativo
 
 ---- Variáveis de Risco de Mercado
+
 Nível de ativo:
 
 - obj.duration retorna a duration calculada para o ativo
@@ -94,10 +98,12 @@ Nível de portfólio (só terá diferenças caso obj.quantity != 1):
 - obj.portfolio_convexity retorna a convexidade para o portfólio inteiro (quantidade * obj.convexity)
 
 Bucketting/Bucketeamento:
+
 - obj.risk_buckets retorna os buckets utilizados para fazer a alocação via obj.__bucketting__()
 - obj.structured_buckets() método retorna o bucketeamento em formato de Pandas DataFrame, com o RiskType incluso
 
 ---- Ferramental Geral:
+
 - str(obj) retorna o bond_name seguido de características do bond, como, vencimento
 - caso em uma lista, o obj será descrito com string que adiciona ao str(obj) a taxa do objeto (bond_yield)
 - len(obj) retorna o número de fluxos de caixa registrados para o objeto

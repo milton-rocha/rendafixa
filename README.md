@@ -29,6 +29,12 @@ Principais variáveis disponíveis para o objeto:
 ### Bond
 Classe responsável por todos os cálculos de precificação e riscos de Bonds de forma generalizada
 
+Melhor prática para aproveitar da performance do código:
+
+- Fornecer YieldCurve (FlatForward, caso necessário) como variável já calculada presente nos kwargs
+
+- Fornecer holidays (feriados) como variável já calculada presente nos kwargs (código lê o parquet salvo na mesma pasta por default)
+
 **kwargs disponíveis:
 
   - annual_coupon, float, default = 0:

@@ -75,11 +75,11 @@ Classe responsável por todos os cálculos de precificação e riscos de Bonds d
 
 Principais variáveis disponíveis para o objeto:
 
----- Variáveis relativas ao Pricing
+#### Variáveis relativas ao Pricing
 
 - obj.price retorna o preço calculado para o ativo
 
----- Variáveis de Risco de Mercado
+#### Variáveis de Risco de Mercado
 
 Nível de ativo:
 
@@ -102,7 +102,7 @@ Bucketting/Bucketeamento:
 - obj.risk_buckets retorna os buckets utilizados para fazer a alocação via obj.__bucketting__()
 - obj.structured_buckets() método retorna o bucketeamento em formato de Pandas DataFrame, com o RiskType incluso
 
----- Ferramental Geral:
+#### Ferramental Geral:
 
 - str(obj) retorna o bond_name seguido de características do bond, como, vencimento
 - caso em uma lista, o obj será descrito com string que adiciona ao str(obj) a taxa do objeto (bond_yield)

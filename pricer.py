@@ -459,8 +459,7 @@ class BondSolver:
             
             est_yield = bond.bond_yield + (self.price_obj - bond.price)/bond.dv01/10000.
             bond.bond_yield    = est_yield
-            bond.__price__()
-            bond.__risks__()
+            bond = Bond(**vars(bond))
             error     = self.price_obj - bond.price
             
             if i > 0: d.append([bond.bond_yield, bond.price, self.price_obj, bond.dv01, error, deepcopy(bond)])
@@ -561,5 +560,5 @@ class NTNF(Bond):
                          bond_yield, face_value = 1000.,
                          annual_coupon = .1,
                          coupon_frequency = 2,
-                         bond_name = 'NTNB',
+                         bond_name = 'NTNF',
                          **kwargs)

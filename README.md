@@ -1,6 +1,10 @@
 # rendafixa
 Repositório dedicado à modelagem e cálculos em renda fixa
 
+Performance do objeto de pricing
+
+![Gráfico 1. Performance](https://github.com/milton-rocha/rendafixa/tree/main/example_images/performance_codigo.png?raw=true)
+
 ### date_utils.py
 - Contém as funções utilitárias de datas, como edate() e feriados() e algumas funções para formatação de datas
 

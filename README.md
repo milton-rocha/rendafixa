@@ -3,7 +3,7 @@ Repositório dedicado à modelagem e cálculos em renda fixa
 
 Performance do objeto de pricing
 
-![alt text]([https://github.com/milton-rocha/rendafixa/tree/main/example_images/performance_codigo.png](https://github.com/milton-rocha/rendafixa/blob/86559dc44a94be9b96315b9125575181f89ddd08/example_images/performance_codigo.png))
+<img src="[https://github.com/milton-rocha/rendafixa/tree/main/example_images/performance_codigo.png](https://github.com/milton-rocha/rendafixa/blob/86559dc44a94be9b96315b9125575181f89ddd08/example_images/performance_codigo.png" alt="Performance" title="Gráfico 1. Performance">
 
 ### date_utils.py
 - Contém as funções utilitárias de datas, como edate() e feriados() e algumas funções para formatação de datas

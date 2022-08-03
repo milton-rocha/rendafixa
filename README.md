@@ -5,8 +5,6 @@ Performance do objeto de pricing
 
 ![performance_codigo](https://user-images.githubusercontent.com/105393956/182719127-ed35b0cf-74a7-45b5-8472-702e1098d54b.png)
 
-<img src="[https://github.com/milton-rocha/rendafixa/tree/main/example_images/performance_codigo.png](https://github.com/milton-rocha/rendafixa/blob/86559dc44a94be9b96315b9125575181f89ddd08/example_images/performance_codigo.png" alt="Performance" title="Gráfico 1. Performance">
-
 ### date_utils.py
 - Contém as funções utilitárias de datas, como edate() e feriados() e algumas funções para formatação de datas
 
@@ -103,13 +101,19 @@ Nível de ativo:
 - obj.curve_risks retorna as medidas de risco principais, só aparece caso obj.bucketting = True
 - obj.risk_report(True) irá dar print na tela dos principais riscos em formato tabulate e retornar a matriz obj.curve_risks
 
+<img width="624" alt="codigo ntnf na curva" src="https://user-images.githubusercontent.com/105393956/182719251-0998c5a8-3e65-443e-abe6-6384dc6c1162.png">
+
 Nível de portfólio (só terá diferenças caso obj.quantity != 1):
 
 - obj.portfolio_dv01 retorna o DV01 para o portfólio inteiro (quantidade * obj.dv01)
 - obj.portfolio_dvs retorna os KRDV01 para o portfólio inteiro (quantidade * obj.dvs)
 - obj.portfolio_convexity retorna a convexidade para o portfólio inteiro (quantidade * obj.convexity)
 
+<img width="793" alt="krdv01 portfolio simulado codigo" src="https://user-images.githubusercontent.com/105393956/182719232-ec5f77bb-afe7-4edb-810b-e1321e02bcf8.png">
+
 Bucketting/Bucketeamento:
+
+![KRDV01 B60](https://user-images.githubusercontent.com/105393956/182719195-adf93a33-e877-47f1-8768-4fac527009ca.png)
 
 - obj.risk_buckets retorna os buckets utilizados para fazer a alocação via obj.__bucketting__()
 - obj.structured_buckets() método retorna o bucketeamento em formato de Pandas DataFrame, com o RiskType incluso

@@ -124,3 +124,7 @@ Bucketting/Bucketeamento:
 - caso em uma lista, o obj será descrito com string que adiciona ao str(obj) a taxa do objeto (bond_yield)
 - len(obj) retorna o número de fluxos de caixa registrados para o objeto
 - obj() retorna o preço do objeto (igual à obj.price)
+
+### LTN, NTNF, NTNB, LFT
+
+Classes que herdam todas as características de Bond, com variáveis predefinidas para cálculo específico de cada tipo de bond, fazendo com que NTN-F inicialize com annual_coupon = 10%, coupon_frequency = 2, bond_name = 'NTNF' e assim vale para todos os outros objetos. Para os casos de títulos com indexação, NTN-B e LFT, o argumento VNA passa a ser requerido para construção do objeto

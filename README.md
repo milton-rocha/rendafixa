@@ -128,3 +128,49 @@ Bucketting/Bucketeamento:
 ### LTN, NTNF, NTNB, LFT
 
 Classes que herdam todas as características de Bond, com variáveis predefinidas para cálculo específico de cada tipo de bond, fazendo com que NTN-F inicialize com annual_coupon = 10%, coupon_frequency = 2, bond_name = 'NTNF' e assim vale para todos os outros objetos. Para os casos de títulos com indexação, NTN-B e LFT, o argumento VNA passa a ser requerido para construção do objeto
+
+## markov_transition_matrix.py
+
+### get_copom
+
+Função para download de série histórica das decisões do COPOM, irá retornar um pandas DataFrame com todas as colunas presentes no site do BCB
+
+## TransitionMatrixCOPOM
+
+Classe para cálculo e fornecimento de matriz de transição (Markov) para as decisões do COPOM
+
+Propriedades do objeto:
+    - self.transition_matrix  : matriz de transição calculada com texto equivalente de decisão, ex: Hike 25
+    - self.transition_matrix_ : matriz de transição calculada com números no lugar de texto, na coluna e no índice
+    
+### path_probability
+
+Método para cálculo de probabilidade de um caminho específico se executar em reuniões do COPOM
+
+Variável solicitada: path
+
+Lista contendo o caminho de juros proposto para as reuniões do COPOM
+                ex: [0,50,25,25,50]
+
+
+## simula_fatores.py
+
+    Classe para precificação e simulação de cenários de fatores de juros e,
+consequentemente, taxas de acordo com decisões do COPOM
+
+### _fator:
+        cálculo de fator e taxa de juros dado um cenário de decisões
+
+<img width="571" alt="objeto F24" src="https://user-images.githubusercontent.com/105393956/188241838-747bd36f-cfe2-4f43-b343-0537953224f6.png">
+
+### _possible_copom:
+        gerador de caminhos possíveis de COPOM
+
+### _cdv01:
+        cálculo de derivadas parciais de cada vencimento fornecido em
+    relação à cada um dos COPOM fornecidos
+    
+![heatmap CDV01](https://user-images.githubusercontent.com/105393956/188241793-6fae2acc-ad54-4ae2-b8fc-7f9a4e8fee59.png)
+
+### _fator_multiplo:
+        cálculo de fatores múltiplos

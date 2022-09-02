@@ -9,7 +9,9 @@ Performance do objeto de pricing
 - Contém as funções utilitárias de datas, como edate() e feriados() e algumas funções para formatação de datas
 
 ## calc_utils.py
+
 ### Fluxos
+
 Classe responsável pelo cálculo e disponibilização de objeto de fluxos, desde que sejam padronizados seguindo os valores propostos na classe para inicializá-la
 
 Principais variáveis disponíveis para o objeto:
@@ -18,6 +20,7 @@ Principais variáveis disponíveis para o objeto:
 - obj.dus fornece todos os vencimentos, em dias úteis, dos fluxos de caixa calculados
 
 ### FlatForward
+
 Classe para construção de uma curva de juros que se utiliza de interpolação e extrapolação (quando desejado) FlatForward para os pontos que a compõe
 
 Principais variáveis disponíveis para o objeto:
@@ -30,7 +33,9 @@ Principais variáveis disponíveis para o objeto:
 - str(obj) ou listas que contenham o objeto, irá retornar uma string contento os principais dados da ETTJ construída
 
 ## pricer.py
+
 ### Bond
+
 Classe responsável por todos os cálculos de precificação e riscos de Bonds de forma generalizada
 
 Melhor prática para aproveitar da performance do código:

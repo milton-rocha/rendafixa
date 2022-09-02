@@ -1,6 +1,6 @@
 # rendafixa
 
-  Repositório dedicado à modelagem e cálculos em renda fixa
+    Repositório dedicado à modelagem e cálculos em renda fixa
 
 Performance do objeto de pricing
 
@@ -13,7 +13,7 @@ Performance do objeto de pricing
 
 ### Fluxos
 
-  Classe responsável pelo cálculo e disponibilização de objeto de fluxos, desde que sejam padronizados seguindo os valores propostos na classe para inicializá-la
+    Classe responsável pelo cálculo e disponibilização de objeto de fluxos, desde que sejam padronizados seguindo os valores propostos na classe para       inicializá-la
 
 Principais variáveis disponíveis para o objeto:
 - obj.fatores fornece todos os fatores dos fluxos de caixa calculados
@@ -22,7 +22,7 @@ Principais variáveis disponíveis para o objeto:
 
 ### FlatForward
 
-  Classe para construção de uma curva de juros que se utiliza de interpolação e extrapolação (quando desejado) FlatForward para os pontos que a compõe
+    Classe para construção de uma curva de juros que se utiliza de interpolação e extrapolação (quando desejado) FlatForward para os pontos que a compõe
 
 Principais variáveis disponíveis para o objeto:
 - obj([lista_vencimentos]) - call do objeto - irá interpolar todas as taxas fornecidas na lista_vencimentos
@@ -37,7 +37,7 @@ Principais variáveis disponíveis para o objeto:
 
 ### Bond
 
-  Classe responsável por todos os cálculos de precificação e riscos de Bonds de forma generalizada
+    Classe responsável por todos os cálculos de precificação e riscos de Bonds de forma generalizada
 
 Melhor prática para aproveitar da performance do código:
 
@@ -133,7 +133,7 @@ Bucketting/Bucketeamento:
 
 ### LTN, NTNF, NTNB, LFT
 
-  Classes que herdam todas as características de Bond, com variáveis predefinidas para cálculo específico de cada tipo de bond, fazendo com que NTN-F inicialize com annual_coupon = 10%, coupon_frequency = 2, bond_name = 'NTNF' e assim vale para todos os outros objetos. Para os casos de títulos com indexação, NTN-B e LFT, o argumento VNA passa a ser requerido para construção do objeto
+    Classes que herdam todas as características de Bond, com variáveis predefinidas para cálculo específico de cada tipo de bond, fazendo com que NTN-F inicialize com annual_coupon = 10%, coupon_frequency = 2, bond_name = 'NTNF' e assim vale para todos os outros objetos. Para os casos de títulos com indexação, NTN-B e LFT, o argumento VNA passa a ser requerido para construção do objeto
 
 ## markov_transition_matrix.py
 
@@ -162,7 +162,7 @@ Lista contendo o caminho de juros proposto para as reuniões do COPOM
 ## simula_fatores.py
 
     Classe para precificação e simulação de cenários de fatores de juros e,
-consequentemente, taxas de acordo com decisões do COPOM
+    consequentemente, taxas de acordo com decisões do COPOM
 
 ### _fator:
         cálculo de fator e taxa de juros dado um cenário de decisões
